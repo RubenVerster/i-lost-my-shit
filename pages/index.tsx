@@ -1,10 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+
+import Info from "../components/Info";
+import List from "../components/List";
+import Flame from "../components/Flame";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>I Lost It!</title>
         <meta
@@ -14,17 +18,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>I Lost My 💩</h1>
-
-        <p className={styles.description}>
-          This is the amount of times I lost it while I was looking at bad code
-        </p>
-
-        <div className={styles.grid}>42</div>
+      <main>
+        <h1>I Lost My 💩</h1>
+        <div>
+          <Info />
+          <List />
+        </div>
       </main>
-
-      <footer className={styles.footer}>&copy; Ruben Verster 2022</footer>
+      <Footer />
     </div>
   );
 };

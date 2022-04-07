@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "watch-sass": "node-sass ./scss/main.scss ./styles/main.css -w"
   },
   "dependencies": {
     "axios": "^0.26.1",
     "firebase": "^9.6.10",
     "next": "12.1.4",
+    "node-sass": "^7.0.1",
     "react": "18.0.0"
   },
   "devDependencies": {
