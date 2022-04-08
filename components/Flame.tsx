@@ -1,8 +1,8 @@
 type FlameProps = {
-  color: string;
+  number: number;
 };
-const Flame = ({ color }: FlameProps) => {
-  return <div className="flame" style={{ backgroundColor: color }}></div>;
+const Flame = ({ number }: FlameProps) => {
+  return <div className={`flame flame-${number}`}></div>;
 };
 
 export default Flame;

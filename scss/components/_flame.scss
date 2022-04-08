@@ -1,10 +1,9 @@
 .flame {
-  background-color: white;
   bottom: 0;
   position: absolute;
-  width: 120%;
+  width: 139%;
   height: 420px;
-  bottom: 20px;
+  bottom: 42px;
   z-index: 1;
   clip-path: polygon(
     0% 89%,
@@ -49,4 +48,51 @@
     100% 100%,
     0% 100%
   );
+
+  &-1 {
+    animation: left-right 8s infinite linear;
+    animation-delay: 333ms;
+    background-color: red;
+  }
+  &-2 {
+    animation: right-left 5s infinite linear;
+    animation-delay: 420ms;
+    background-color: yellow;
+  }
+  &-3 {
+    animation: left-right 3s infinite linear;
+    animation-delay: 690ms;
+    background-color: orange;
+  }
+}
+
+@keyframes left-right {
+  0% {
+    transform: translateX(-100px);
+  }
+  33% {
+    transform: translateX(0);
+  }
+
+  67% {
+    transform: translateX(-33px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+@keyframes right-left {
+  0% {
+    transform: translateX(-77px);
+  }
+  33% {
+    transform: translateX(0);
+  }
+
+  67% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-77px);
+  }
 }

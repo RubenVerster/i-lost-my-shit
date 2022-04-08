@@ -4,7 +4,9 @@ import Flame from "./Flame";
 const Footer = () => {
   return (
     <>
-      <Flame color="black" />
+      <Flame number={1} />
+      <Flame number={2} />
+      <Flame number={3} />
       <footer className="footer">
         <div className="footer_container">
           <p> &copy; Ruben Verster 2022</p>
