@@ -1,8 +1,14 @@
 import "../styles/main.css";
 import type { AppProps } from "next/app";
+import { StoreProvider } from "easy-peasy";
+import { store } from "../store";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <StoreProvider store={store}>
+      <Component {...pageProps} />
+    </StoreProvider>
+  );
 }
 
 export default MyApp;

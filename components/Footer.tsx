@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Flame from "./Flame";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
