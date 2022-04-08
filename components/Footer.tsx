@@ -3,11 +3,6 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 const Footer = () => {
-  const route = useRouter();
-
-  useEffect(() => {
-    console.log(`ROUTE:`, route);
-  }, [route]);
   return (
     <>
       <Flame number={1} />

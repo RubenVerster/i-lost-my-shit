@@ -62,9 +62,9 @@ a {
   33% {
     transform: translateX(0); }
   67% {
-    transform: translateX(-169px); }
+    transform: translateX(-69px); }
   100% {
-    transform: translateX(0); } }
+    transform: translateX(-169px); } }
 
 .footer {
   width: 100%;
