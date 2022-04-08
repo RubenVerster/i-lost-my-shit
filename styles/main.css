@@ -34,15 +34,15 @@ a {
   .flame-1 {
     animation: left-right 8s infinite linear;
     animation-delay: 333ms;
-    background-color: red; }
+    background-color: rgba(255, 0, 0, 0.77); }
   .flame-2 {
     animation: right-left 5s infinite linear;
     animation-delay: 420ms;
-    background-color: yellow; }
+    background-color: rgba(255, 255, 0, 0.77); }
   .flame-3 {
     animation: left-right 3s infinite linear;
     animation-delay: 690ms;
-    background-color: orange; }
+    background-color: rgba(255, 166, 0, 0.77); }
 
 @keyframes left-right {
   0% {

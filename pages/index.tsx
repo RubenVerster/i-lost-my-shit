@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import Info from "../components/Info";
 import List from "../components/List";
-import Flame from "../components/Flame";
 import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
