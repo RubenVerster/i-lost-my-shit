@@ -6,10 +6,16 @@ import List from "../components/List";
 import Footer from "../components/Footer";
 
 import { useStoreActions, useStoreState } from "../store";
+import { useEffect, useState } from "react";
 
 const Home: NextPage = () => {
   const adminPage = useStoreState((state) => state.adminPage);
   const setAdminPage = useStoreActions((actions) => actions.setAdminPage);
+  const [localState, setLocalState] = useState(adminPage);
+
+  useEffect(() => {
+    setLocalState(!adminPage);
+  }, [adminPage, setAdminPage]);
 
   return (
     <div>
@@ -25,11 +31,13 @@ const Home: NextPage = () => {
       <main>
         <h1>I Lost My 💩!</h1>
         <div>
-          <Info />
-          <List />
+          <>
+            <Info />
+            <List />
+          </>
         </div>
       </main>
-      <Footer adminPage={adminPage} setAdminPage={setAdminPage} />
+      <Footer />
     </div>
   );
 };

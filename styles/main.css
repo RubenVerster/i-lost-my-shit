@@ -14,7 +14,8 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  background: linear-gradient(to bottom, #111, #333); }
 
 a {
   text-decoration: none;
@@ -32,7 +33,7 @@ a {
   z-index: 1;
   clip-path: polygon(0% 89%, 3% 82%, 6% 78%, 7% 84%, 8% 92%, 12% 89%, 13% 86%, 16% 91%, 21% 96%, 21% 87%, 24% 91%, 29% 81%, 30% 88%, 32% 93%, 36% 93%, 38% 87%, 42% 91%, 45% 83%, 48% 79%, 52% 83%, 51% 88%, 53% 92%, 57% 93%, 58% 89%, 61% 86%, 61% 81%, 65% 85%, 65% 89%, 69% 93%, 74% 91%, 73% 87%, 78% 82%, 78% 87%, 81% 91%, 86% 92%, 88% 85%, 92% 88%, 95% 83%, 100% 88%, 100% 100%, 0% 100%); }
   .flame-1 {
-    animation: left-right 8s infinite linear;
+    animation: left-right 11s infinite linear;
     animation-delay: 333ms;
     background-color: rgba(255, 0, 0, 0.69);
     height: 400px; }
@@ -42,29 +43,49 @@ a {
     background-color: rgba(255, 255, 0, 0.88);
     height: 333px; }
   .flame-3 {
-    animation: left-right 3s infinite linear;
+    animation: left-right 7s infinite linear;
     animation-delay: 690ms;
     background-color: rgba(255, 166, 0, 0.77); }
 
 @keyframes left-right {
   0% {
     transform: translateX(-100px); }
-  33% {
-    transform: translateX(0); }
-  67% {
+  12% {
     transform: translateX(-33px); }
+  25% {
+    transform: translateX(0px); }
+  37% {
+    transform: translateX(33px); }
+  50% {
+    transform: translateX(0px); }
+  62% {
+    transform: translateX(-33px); }
+  75% {
+    transform: translateX(0px); }
+  87% {
+    transform: translateX(33px); }
   100% {
     transform: translateX(-100px); } }
 
 @keyframes right-left {
   0% {
-    transform: translateX(-169px); }
-  33% {
-    transform: translateX(0); }
-  67% {
-    transform: translateX(-69px); }
+    transform: translateX(-100px); }
+  12% {
+    transform: translateX(-33px); }
+  25% {
+    transform: translateX(0px); }
+  37% {
+    transform: translateX(33px); }
+  50% {
+    transform: translateX(0px); }
+  62% {
+    transform: translateX(-33px); }
+  75% {
+    transform: translateX(0px); }
+  87% {
+    transform: translateX(33px); }
   100% {
-    transform: translateX(-169px); } }
+    transform: translateX(-100px); } }
 
 .footer {
   width: 100%;

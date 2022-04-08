@@ -50,7 +50,7 @@
   );
 
   &-1 {
-    animation: left-right 8s infinite linear;
+    animation: left-right 11s infinite linear;
     animation-delay: 333ms;
     background-color: rgba(255, 0, 0, 0.69);
     height: 400px;
@@ -62,7 +62,7 @@
     height: 333px;
   }
   &-3 {
-    animation: left-right 3s infinite linear;
+    animation: left-right 7s infinite linear;
     animation-delay: 690ms;
     background-color: rgba(255, 166, 0, 0.77);
   }
@@ -72,12 +72,26 @@
   0% {
     transform: translateX(-100px);
   }
-  33% {
-    transform: translateX(0);
-  }
-
-  67% {
+  12% {
     transform: translateX(-33px);
+  }
+  25% {
+    transform: translateX(0px);
+  }
+  37% {
+    transform: translateX(33px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  62% {
+    transform: translateX(-33px);
+  }
+  75% {
+    transform: translateX(0px);
+  }
+  87% {
+    transform: translateX(33px);
   }
   100% {
     transform: translateX(-100px);
@@ -85,16 +99,30 @@
 }
 @keyframes right-left {
   0% {
-    transform: translateX(-169px);
+    transform: translateX(-100px);
   }
-  33% {
-    transform: translateX(0);
+  12% {
+    transform: translateX(-33px);
   }
-
-  67% {
-    transform: translateX(-69px);
+  25% {
+    transform: translateX(0px);
+  }
+  37% {
+    transform: translateX(33px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  62% {
+    transform: translateX(-33px);
+  }
+  75% {
+    transform: translateX(0px);
+  }
+  87% {
+    transform: translateX(33px);
   }
   100% {
-    transform: translateX(-169px);
+    transform: translateX(-100px);
   }
 }
