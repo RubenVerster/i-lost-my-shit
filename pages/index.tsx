@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>I Lost My 💩</h1>
+        <h1>I Lost My 💩!</h1>
         <div>
           <Info />
           <List />
