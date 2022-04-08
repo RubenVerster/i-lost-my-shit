@@ -1,11 +1,8 @@
 import { Action } from "easy-peasy";
 
 export interface IStoreModel {
-  page: Pages.Home | Pages.Admin;
-  setPage: Action<IStoreModel, Pages>;
+  adminPage: boolean;
+  setAdminPage: Action<IStoreModel, boolean>;
 }
 
-export enum Pages {
-  Home = "home",
-  Admin = "admin",
-}
+export type adminPage = boolean;

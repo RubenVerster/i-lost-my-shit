@@ -5,11 +5,11 @@ import Info from "../components/Info";
 import List from "../components/List";
 import Footer from "../components/Footer";
 
-import { useStoreState } from "../store";
+import { useStoreActions, useStoreState } from "../store";
 
 const Home: NextPage = () => {
-  const page = useStoreState((state) => state.page);
-  console.log(page);
+  const adminPage = useStoreState((state) => state.adminPage);
+  const setAdminPage = useStoreActions((actions) => actions.setAdminPage);
 
   return (
     <div>
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           <List />
         </div>
       </main>
-      <Footer />
+      <Footer adminPage={adminPage} setAdminPage={setAdminPage} />
     </div>
   );
 };

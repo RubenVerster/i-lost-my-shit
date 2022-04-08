@@ -1,12 +1,13 @@
 import { action, createStore, createTypedHooks } from "easy-peasy";
-import { Pages, IStoreModel } from "../types";
+import { IStoreModel } from "../types";
 
 const typedHooks = createTypedHooks<IStoreModel>();
 
 export const store = createStore<IStoreModel>({
-  page: Pages.Home,
-  setPage: action((state, payload) => {
-    state.page = payload;
+  adminPage: false,
+  setAdminPage: action((state) => {
+    state.adminPage = !state.adminPage;
+    console.log("setAdminPage", state.adminPage);
   }),
 });
 
