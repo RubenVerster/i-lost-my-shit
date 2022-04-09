@@ -315,7 +315,6 @@ a {
 .login {
   top: 50%;
   left: 50%;
-  min-height: 50vh;
   transform: translate(-50%, -50%);
   position: absolute;
   display: flex;
@@ -350,13 +349,18 @@ a {
     width: 95%;
     top: 2.5%;
     left: 2.5%; }
+  @media (max-width: 768px) {
+    .login {
+      width: 80%;
+      height: 42vh; } }
   .login__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 3;
-    width: 70%; }
+    width: 70%;
+    padding: 2rem; }
     .login__form input {
       background-color: transparent;
       border: rgba(255, 255, 255, 0.4) 1px solid;
@@ -366,6 +370,10 @@ a {
       text-align: center;
       height: 4rem;
       width: 100%; }
+      @media (max-width: 768px) {
+        .login__form input {
+          height: 2.5rem;
+          margin: 1rem; } }
     .login__form button {
       border: rgba(255, 0, 0, 0.4) 1px solid;
       border-radius: 3px;
@@ -373,6 +381,7 @@ a {
       margin: 2rem 0;
       text-align: center;
       color: #000;
+      font-size: 1.5rem;
       cursor: pointer;
       height: 4rem;
       width: 100%;
@@ -380,3 +389,8 @@ a {
       .login__form button:hover {
         transform: translateY(-4px);
         box-shadow: 0 1rem 2rem rgba(255, 0, 0, 0.4); }
+      @media (max-width: 768px) {
+        .login__form button {
+          height: 2.5rem;
+          padding: 0rem;
+          margin: 1rem 0; } }

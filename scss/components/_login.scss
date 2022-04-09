@@ -1,7 +1,6 @@
 .login {
   top: 50%;
   left: 50%;
-  min-height: 50vh;
   transform: translate(-50%, -50%);
   position: absolute;
 
@@ -42,6 +41,11 @@
     left: 2.5%;
   }
 
+  @media (max-width: 768px) {
+    width: 80%;
+    height: 42vh;
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -49,6 +53,8 @@
     align-items: center;
     z-index: 3;
     width: 70%;
+    padding: 2rem;
+
     input {
       background-color: transparent;
       border: rgba($color: $white, $alpha: 0.4) 1px solid;
@@ -58,6 +64,11 @@
       text-align: center;
       height: 4rem;
       width: 100%;
+
+      @media (max-width: 768px) {
+        height: 2.5rem;
+        margin: 1rem;
+      }
     }
 
     button {
@@ -67,6 +78,7 @@
       margin: 2rem 0;
       text-align: center;
       color: $black;
+      font-size: 1.5rem;
       cursor: pointer;
       height: 4rem;
       width: 100%;
@@ -75,6 +87,11 @@
       &:hover {
         transform: translateY(-4px);
         box-shadow: 0 1rem 2rem rgba($color: $red, $alpha: 0.4);
+      }
+      @media (max-width: 768px) {
+        height: 2.5rem;
+        padding: 0rem;
+        margin: 1rem 0;
       }
     }
   }
