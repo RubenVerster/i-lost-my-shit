@@ -8,5 +8,27 @@
 
   &_total {
     font-size: 11rem;
+    animation: effect infinite 3s ease-in-out;
+    color: transparent;
+    text-align: center;
+    animation: color-change 2s linear infinite;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: rgba($color: red, $alpha: 0.88);
+  }
+  20% {
+    color: rgba($color: orange, $alpha: 0.88);
+  }
+  40% {
+    color: rgba($color: yellow, $alpha: 0.88);
+  }
+  80% {
+    color: rgba($color: orange, $alpha: 0.88);
+  }
+  100% {
+    color: rgba($color: red, $alpha: 0.88);
   }
 }

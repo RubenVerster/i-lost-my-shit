@@ -153,7 +153,23 @@ a {
   justify-content: space-between;
   flex-direction: column; }
   .info_total {
-    font-size: 11rem; }
+    font-size: 11rem;
+    animation: effect infinite 3s ease-in-out;
+    color: transparent;
+    text-align: center;
+    animation: color-change 2s linear infinite; }
+
+@keyframes color-change {
+  0% {
+    color: rgba(255, 0, 0, 0.88); }
+  20% {
+    color: rgba(255, 165, 0, 0.88); }
+  40% {
+    color: rgba(255, 255, 0, 0.88); }
+  80% {
+    color: rgba(255, 165, 0, 0.88); }
+  100% {
+    color: rgba(255, 0, 0, 0.88); } }
 
 .list {
   height: 100%;
