@@ -21,6 +21,6 @@ export enum Level {
 }
 
 export interface IFooter {
-  setAuth: (auth: boolean) => void;
+  logout: () => void;
   auth: boolean;
 }
