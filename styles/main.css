@@ -151,6 +151,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .info_total {
+    font-size: 11rem; }
 
 .list {
   height: 100%;
