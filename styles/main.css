@@ -37,7 +37,7 @@ a {
   .base_subtitle {
     margin: 0 auto;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     font-size: 1.5rem;
     word-spacing: 3px; }
   .base_content {
@@ -46,8 +46,8 @@ a {
     padding-top: 1rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-around;
     height: 80%; }
 
 .flame {
@@ -135,3 +135,20 @@ a {
     text-transform: uppercase;
     padding: 10px;
     height: 100%; }
+
+.info {
+  border: pink solid 3px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.list {
+  border: pink solid 3px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column; }
