@@ -3,7 +3,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-direction: column;
 
   &_total {
@@ -20,6 +19,55 @@
       font-size: 9rem;
       width: 70%;
       height: 20vh;
+    }
+  }
+
+  &_stats {
+    overflow: hidden;
+    margin: 2rem 0;
+    border-radius: 0.1rem;
+    width: 60%;
+    box-shadow: 0 3px 1rem rgba($white, 0.5);
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &_item {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      height: 100%;
+      width: 90%;
+      font-size: 3.3rem;
+      color: rgba($black, 0.5);
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      text-align: center;
+      p {
+        margin: 0 auto;
+        bottom: 0;
+        position: absolute;
+        font-size: 1rem;
+        color: rgba($color: $black, $alpha: 0);
+        display: hidden;
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+      &:hover {
+        color: rgba($black, 0.7);
+        width: 125%;
+        font-size: 5rem;
+        color: $black;
+        padding-bottom: 1rem;
+        p {
+          color: rgba($color: $black, $alpha: 0.7);
+          font-size: 1rem;
+        }
+      }
     }
   }
 }
