@@ -156,7 +156,8 @@ a {
     font-size: 11rem;
     color: transparent;
     text-align: center;
-    animation: color-change 2s linear infinite; }
+    animation: color-change 2s linear infinite;
+    text-shadow: 0 0 11px rgba(255, 255, 255, 0.5); }
 
 @keyframes color-change {
   0% {
