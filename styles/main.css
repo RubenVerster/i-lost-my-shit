@@ -228,6 +228,10 @@ a {
         .info_stats_item:hover p {
           color: rgba(0, 0, 0, 0.7);
           font-size: 1rem; }
+    @media (max-width: 768px) {
+      .info_stats {
+        height: 50px;
+        font-size: 1rem; } }
 
 @keyframes color-change {
   0% {
