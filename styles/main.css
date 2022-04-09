@@ -154,7 +154,6 @@ a {
   flex-direction: column; }
   .info_total {
     font-size: 11rem;
-    animation: effect infinite 3s ease-in-out;
     color: transparent;
     text-align: center;
     animation: color-change 2s linear infinite; }
