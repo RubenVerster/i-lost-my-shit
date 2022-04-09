@@ -27,31 +27,17 @@ const Login = ({ setAuth }: any) => {
       setSubmitError(true);
       console.log(error);
     }
-
-    // await setPersistence(auth, browserLocalPersistence)
-    //   .then(() => {
-    //     return signInWithEmailAndPassword(auth, email, password).then(() => {
-    //       setUserLoggedIn(true);
-    //     });
-    //   })
-    //   .catch((error) => {
-    //     setSubmitError(true);
-    //     const errorCode = error.code;
-    //     const errorMessage = error.message;
-    //   });
   };
 
   return (
-    <div className="login flex flex-col items-center justify-evenly p-12">
+    <div className="login">
       <form
-        className="login__form flex flex-col items-center"
+        className="login__form"
         autoComplete="off"
         onSubmit={(e) => login(e)}
       >
         {submitError && (
-          <p className="text-white text-2xl mt-3">
-            👀 Should I start tracking your IP? 🤔
-          </p>
+          <p className="">👀 Should I start tracking your IP? 🤔</p>
         )}
         <input
           required
@@ -62,7 +48,6 @@ const Login = ({ setAuth }: any) => {
           }}
           type="email"
           name="email"
-          className="form-control"
           id="emailInput"
           aria-describedby="emailHelp"
           placeholder=""
@@ -76,7 +61,6 @@ const Login = ({ setAuth }: any) => {
           }}
           type="password"
           name="password"
-          className="form-control"
           id="exampleinput requiredPassword1"
           placeholder=""
         />

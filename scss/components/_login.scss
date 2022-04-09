@@ -1,0 +1,81 @@
+.login {
+  top: 50%;
+  left: 50%;
+  min-height: 50vh;
+  transform: translate(-50%, -50%);
+  position: absolute;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 422px;
+  border: rgba($color: $white, $alpha: 0.4) 1px solid;
+  border-radius: 2px;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1;
+  &::before {
+    content: "";
+    height: 300%;
+    width: 300%;
+    position: absolute;
+    background: conic-gradient($red, $yellow, $red, $yellow, $red);
+    left: -100%;
+    top: -100%;
+    animation: spin 1.5s infinite linear;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  &::after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    top: 2.5%;
+    left: 2.5%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    width: 70%;
+    input {
+      background-color: transparent;
+      border: rgba($color: $white, $alpha: 0.4) 1px solid;
+      border-radius: 3px;
+      padding: 1rem;
+      margin: 2rem 0;
+      text-align: center;
+      height: 4rem;
+      width: 100%;
+    }
+
+    button {
+      border: rgba($color: $red, $alpha: 0.4) 1px solid;
+      border-radius: 3px;
+      padding: 1rem;
+      margin: 2rem 0;
+      text-align: center;
+      color: $black;
+      cursor: pointer;
+      height: 4rem;
+      width: 100%;
+      transition: all 0.1s linear;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 1rem 2rem rgba($color: $red, $alpha: 0.4);
+      }
+    }
+  }
+}

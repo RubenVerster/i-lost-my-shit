@@ -78,6 +78,15 @@ a {
 .yellow {
   background-color: rgba(255, 255, 0, 0.88); }
 
+.admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative; }
+
 .flame {
   margin-left: -42px;
   bottom: 0;
@@ -302,3 +311,72 @@ a {
     .card {
       margin-top: 0.7rem;
       font-size: 0.85rem; } }
+
+.login {
+  top: 50%;
+  left: 50%;
+  min-height: 50vh;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 422px;
+  border: rgba(255, 255, 255, 0.4) 1px solid;
+  border-radius: 2px;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1; }
+  .login::before {
+    content: "";
+    height: 300%;
+    width: 300%;
+    position: absolute;
+    background: conic-gradient(#ff0000, #ffff00, #ff0000, #ffff00, #ff0000);
+    left: -100%;
+    top: -100%;
+    animation: spin 1.5s infinite linear; }
+
+@keyframes spin {
+  100% {
+    transform: rotate(-360deg); } }
+  .login::after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    top: 2.5%;
+    left: 2.5%; }
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    width: 70%; }
+    .login__form input {
+      background-color: transparent;
+      border: rgba(255, 255, 255, 0.4) 1px solid;
+      border-radius: 3px;
+      padding: 1rem;
+      margin: 2rem 0;
+      text-align: center;
+      height: 4rem;
+      width: 100%; }
+    .login__form button {
+      border: rgba(255, 0, 0, 0.4) 1px solid;
+      border-radius: 3px;
+      padding: 1rem;
+      margin: 2rem 0;
+      text-align: center;
+      color: #000;
+      cursor: pointer;
+      height: 4rem;
+      width: 100%;
+      transition: all 0.1s linear; }
+      .login__form button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 1rem 2rem rgba(255, 0, 0, 0.4); }

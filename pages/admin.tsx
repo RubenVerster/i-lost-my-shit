@@ -16,7 +16,7 @@ const Admin = () => {
   };
 
   return (
-    <div>
+    <div className="admin">
       {auth ? <Manage logout={logout} /> : <Login setAuth={setAuth} />}
       <AdminFooter logout={logout} auth={auth} />
     </div>

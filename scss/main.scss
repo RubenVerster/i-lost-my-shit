@@ -1,8 +1,11 @@
 @import "./abstracts/variables";
 @import "./base/base";
 
+@import "./pages/admin";
+
 @import "./components/_flame";
 @import "./components/_footer.scss";
 @import "./components/_info.scss";
 @import "./components/_list.scss";
 @import "./components/_card.scss";
+@import "./components/_login.scss";
