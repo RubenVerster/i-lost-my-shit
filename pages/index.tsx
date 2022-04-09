@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       <main className="base">
         <h1 className="base_title">I Lost My 💩!</h1>
         <h2 className="base_subtitle">
-          This is the amount of times I lost it while I was looking at bad code
+          Bad code made me lose it a couple of times...
         </h2>
         <div className="base_content">
           <Info />

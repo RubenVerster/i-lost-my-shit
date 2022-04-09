@@ -32,12 +32,14 @@ a {
     margin: 0 auto;
     text-align: center;
     padding-top: 1rem;
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    word-spacing: 11px; }
   .base_subtitle {
     margin: 0 auto;
     text-align: center;
     padding-top: 1rem;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    word-spacing: 3px; }
   .base_content {
     margin: 0 auto;
     text-align: center;
@@ -49,6 +51,7 @@ a {
     height: 80%; }
 
 .flame {
+  margin-left: -42px;
   bottom: 0;
   position: absolute;
   width: 139%;
