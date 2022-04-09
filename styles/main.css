@@ -16,6 +16,10 @@ body {
   overflow: hidden;
   position: relative;
   background: linear-gradient(to bottom, #111, #333); }
+  @media (max-width: 768px) {
+    html,
+    body {
+      overflow-y: scroll; } }
 
 a {
   text-decoration: none;
@@ -51,7 +55,6 @@ a {
       .base_subtitle {
         margin: 0 auto;
         text-align: center;
-        padding-top: 0.5rem;
         font-size: 1rem;
         width: 70%; } }
   .base_content {
@@ -68,7 +71,7 @@ a {
         flex-direction: column;
         justify-content: start;
         height: 75%;
-        padding: 1rem 3rem; } }
+        padding: 0rem 3rem; } }
 
 .red {
   background-color: rgba(255, 0, 0, 0.88); }
@@ -166,11 +169,18 @@ a {
     height: 100%; }
 
 .info {
-  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: space-between; }
+  @media (max-width: 768px) {
+    .info {
+      margin: 0 auto;
+      text-align: center;
+      font-size: 9rem;
+      width: 90%;
+      justify-content: flex-start; } }
   .info_total {
     font-size: 11rem;
     color: transparent;
@@ -179,12 +189,9 @@ a {
     text-shadow: 0 0 11px rgba(255, 255, 255, 0.5); }
     @media (max-width: 768px) {
       .info_total {
-        margin: 0 auto;
         text-align: center;
-        padding-top: 0.5rem;
-        font-size: 9rem;
-        width: 70%;
-        height: 20vh; } }
+        font-size: 7rem;
+        width: 70%; } }
   .info_stats {
     overflow: hidden;
     margin: 2rem 0;
@@ -209,6 +216,10 @@ a {
       transition: all 0.3s ease-in-out;
       position: relative;
       text-align: center; }
+      @media (max-width: 768px) {
+        .info_stats_item {
+          font-size: 1.8rem;
+          margin-top: 0; } }
       .info_stats_item p {
         margin: 0 auto;
         bottom: 0;
@@ -231,7 +242,8 @@ a {
     @media (max-width: 768px) {
       .info_stats {
         height: 50px;
-        font-size: 1rem; } }
+        font-size: 1rem;
+        margin: 0; } }
 
 @keyframes color-change {
   0% {
@@ -252,6 +264,13 @@ a {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column; }
+  @media (max-width: 768px) {
+    .list {
+      overflow-y: scroll;
+      height: 100%;
+      max-height: 30vh;
+      justify-content: flex-start;
+      margin-top: 1rem; } }
 
 .card {
   clip-path: polygon(100% 0%, 100% 20px, 90% 100%, 0 100%, 0 10px, 10px 0);
@@ -279,3 +298,11 @@ a {
     color: #000;
     top: 0;
     right: 0; }
+    @media (max-width: 768px) {
+      .card_date {
+        height: 17px;
+        font-size: 0.5rem; } }
+  @media (max-width: 768px) {
+    .card {
+      margin-top: 0.7rem;
+      font-size: 0.85rem; } }

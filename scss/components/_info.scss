@@ -1,9 +1,17 @@
 .info {
-  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 9rem;
+    width: 90%;
+    justify-content: flex-start;
+  }
 
   &_total {
     font-size: 11rem;
@@ -13,12 +21,9 @@
     text-shadow: 0 0 11px rgba($white, 0.5);
 
     @media (max-width: 768px) {
-      margin: 0 auto;
       text-align: center;
-      padding-top: 0.5rem;
-      font-size: 9rem;
+      font-size: 7rem;
       width: 70%;
-      height: 20vh;
     }
   }
 
@@ -47,6 +52,12 @@
       transition: all 0.3s ease-in-out;
       position: relative;
       text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+        margin-top: 0;
+      }
+
       p {
         margin: 0 auto;
         bottom: 0;
@@ -73,6 +84,7 @@
     @media (max-width: 768px) {
       height: 50px;
       font-size: 1rem;
+      margin: 0;
     }
   }
 }

@@ -17,6 +17,10 @@ body {
   overflow: hidden;
   position: relative;
   background: linear-gradient(to bottom, #111, #333);
+
+  @media (max-width: 768px) {
+    overflow-y: scroll;
+  }
 }
 
 a {
@@ -58,7 +62,6 @@ a {
     @media (max-width: 768px) {
       margin: 0 auto;
       text-align: center;
-      padding-top: 0.5rem;
       font-size: 1rem;
       width: 70%;
     }
@@ -78,7 +81,7 @@ a {
       flex-direction: column;
       justify-content: start;
       height: 75%;
-      padding: 1rem 3rem;
+      padding: 0rem 3rem;
     }
   }
 }

@@ -5,9 +5,11 @@ const Info = () => {
   const localdata = JSON.parse(JSON.stringify(data));
   return (
     <div className="info">
-      <div className="info_total">
-        <CountUp end={localdata.stats.total} duration={1.11} />
-      </div>
+      <CountUp
+        className="info_total"
+        end={localdata.stats.total}
+        duration={1.11}
+      />
       <div className="info_stats">
         <div className="info_stats_item yellow">
           <CountUp end={localdata.stats.level.low} duration={0.33} />

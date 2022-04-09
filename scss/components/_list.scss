@@ -5,4 +5,12 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    overflow-y: scroll;
+    height: 100%;
+    max-height: 30vh;
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
 }
