@@ -17,10 +17,6 @@ body {
   overflow: hidden;
   position: relative;
   background: linear-gradient(to bottom, #111, #333);
-
-  @media (max-width: 768px) {
-    overflow-y: scroll;
-  }
 }
 
 a {

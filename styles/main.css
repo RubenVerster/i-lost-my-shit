@@ -16,10 +16,6 @@ body {
   overflow: hidden;
   position: relative;
   background: linear-gradient(to bottom, #111, #333); }
-  @media (max-width: 768px) {
-    html,
-    body {
-      overflow-y: scroll; } }
 
 a {
   text-decoration: none;
