@@ -1,5 +1,4 @@
 import {
-  getAuth,
   setPersistence,
   signInWithEmailAndPassword,
   browserLocalPersistence,
@@ -7,26 +6,28 @@ import {
 
 import { useState } from "react";
 
-const Login = ({ setAuth }: any) => {
+const Login = ({ setAuth, auth }: any) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitError, setSubmitError] = useState(false);
-
-  const auth = getAuth();
+  const [loading, setLoading] = useState(false);
 
   const login = async (e: any) => {
     e.preventDefault();
+    setLoading(true);
 
-    console.log("login");
-
+    console.log(`AUTH`, auth);
     try {
-      setPersistence(auth, browserLocalPersistence);
+      await setPersistence(auth, browserLocalPersistence);
       await signInWithEmailAndPassword(auth, email, password);
       await setAuth(true);
     } catch (error) {
+      setEmail("");
+      setPassword("");
       setSubmitError(true);
       console.log(error);
     }
+    setLoading(false);
   };
 
   return (
@@ -37,7 +38,10 @@ const Login = ({ setAuth }: any) => {
         onSubmit={(e) => login(e)}
       >
         {submitError && (
-          <p className="">👀 Should I start tracking your IP? 🤔</p>
+          <>
+            <p className="error">Should I start tracking your IP?</p>
+            <p> 🤔👀</p>
+          </>
         )}
         <input
           required
@@ -48,6 +52,7 @@ const Login = ({ setAuth }: any) => {
           }}
           type="email"
           name="email"
+          className="form-control"
           id="emailInput"
           aria-describedby="emailHelp"
           placeholder=""
@@ -61,10 +66,11 @@ const Login = ({ setAuth }: any) => {
           }}
           type="password"
           name="password"
+          className="form-control"
           id="exampleinput requiredPassword1"
           placeholder=""
         />
-        <button type="submit" onClick={(e) => login(e)}>
+        <button disabled={loading} type="submit" onClick={(e) => login(e)}>
           Login
         </button>
       </form>

@@ -361,6 +361,8 @@ a {
     z-index: 3;
     width: 70%;
     padding: 2rem; }
+    .login__form .error {
+      text-align: center; }
     .login__form input {
       background-color: transparent;
       border: rgba(255, 255, 255, 0.4) 1px solid;
