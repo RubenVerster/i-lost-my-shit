@@ -12,6 +12,15 @@
     text-align: center;
     animation: color-change 2s linear infinite;
     text-shadow: 0 0 11px rgba($white, 0.5);
+
+    @media (max-width: 768px) {
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 0.5rem;
+      font-size: 9rem;
+      width: 70%;
+      height: 20vh;
+    }
   }
 }
 
