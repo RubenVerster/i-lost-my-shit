@@ -2,6 +2,7 @@ import {
   setPersistence,
   signInWithEmailAndPassword,
   browserLocalPersistence,
+  getAuth,
 } from "firebase/auth";
 
 import { useState } from "react";
@@ -11,15 +12,14 @@ const Login = ({ setAuth, auth }: any) => {
   const [password, setPassword] = useState("");
   const [submitError, setSubmitError] = useState(false);
   const [loading, setLoading] = useState(false);
-
+  const FBAUTH = getAuth();
   const login = async (e: any) => {
     e.preventDefault();
     setLoading(true);
 
-    console.log(`AUTH`, auth);
     try {
-      await setPersistence(auth, browserLocalPersistence);
-      await signInWithEmailAndPassword(auth, email, password);
+      await setPersistence(FBAUTH, browserLocalPersistence);
+      await signInWithEmailAndPassword(FBAUTH, email, password);
       await setAuth(true);
     } catch (error) {
       setEmail("");
