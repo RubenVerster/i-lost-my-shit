@@ -19,3 +19,8 @@ export enum Level {
   Medium = "med",
   High = "high",
 }
+
+export interface IFooter {
+  setAuth: (auth: boolean) => void;
+  auth: boolean;
+}

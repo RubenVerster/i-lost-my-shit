@@ -1,9 +1,12 @@
+import { useState } from "react";
 import AdminFooter from "../components/ADMIN/AdminFooter";
 
 const Admin = () => {
+  const [auth, setAuth] = useState(true);
+
   return (
     <div>
-      <AdminFooter />
+      <AdminFooter auth={auth} setAuth={setAuth} />
     </div>
   );
 };
