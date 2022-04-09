@@ -1,19 +1,16 @@
 import data from "../mock.json";
-import CountUp from "react-countup";
+import Card from "./Card";
+import { IEntry } from "../types";
 
 const List = () => {
   const localdata = JSON.parse(JSON.stringify(data));
-  return (
-    <div className="list">
-      <div>Entry</div>
-      <div>Entry</div>
-      <div>Entry</div>
-      <div>Entry</div>
-      <div>Entry</div>
-      <div>Entry</div>
-      <div>Entry</div>
-    </div>
-  );
+
+  const renderList = () => {
+    return localdata.entries.map((entry: IEntry) => {
+      return <Card {...entry} key={entry.id} />;
+    });
+  };
+  return <div className="list">{renderList()} </div>;
 };
 
 export default List;

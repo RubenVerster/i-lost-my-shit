@@ -6,3 +6,16 @@ export interface IStoreModel {
 }
 
 export type adminPage = boolean;
+
+export interface IEntry {
+  title: string;
+  date: string;
+  level: string;
+  id: number;
+}
+
+export enum Level {
+  Low = "low",
+  Medium = "med",
+  High = "high",
+}

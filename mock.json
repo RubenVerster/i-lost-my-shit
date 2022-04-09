@@ -1,0 +1,22 @@
+{
+  "stats": {
+    "total": "99",
+    "level": {
+      "low": "12",
+      "med": "7",
+      "high": "3"
+    }
+  },
+  "entries": [
+    { "title": "First One", "date": "2016-01-01", "level": "low", "id": "1" },
+    {
+      "title": "Second One",
+      "date": "2016-01-02",
+      "level": "med",
+      "id": "2"
+    },
+    { "title": "Third One", "date": "2016-01-03", "level": "high", "id": "3" },
+    { "title": "Third One", "date": "2016-01-03", "level": "high", "id": "3" },
+    { "title": "Third One", "date": "2016-01-03", "level": "high", "id": "3" }
+  ]
+}
