@@ -6,7 +6,7 @@ import Manage from "../components/ADMIN/Manage";
 const Admin = () => {
   const router = useRouter();
 
-  const [auth, setAuth] = useState(true);
+  const [auth, setAuth] = useState(false);
 
   const logout = async () => {
     await setAuth(false);
@@ -17,7 +17,7 @@ const Admin = () => {
 
   return (
     <div>
-      {auth ? <Manage logout={logout} /> : <Login login={login} />}
+      {auth ? <Manage logout={logout} /> : <Login setAuth={setAuth} />}
       <AdminFooter logout={logout} auth={auth} />
     </div>
   );
