@@ -5,18 +5,7 @@ import Info from "../components/Info";
 import List from "../components/List";
 import Footer from "../components/Footer";
 
-import { useStoreActions, useStoreState } from "../store";
-import { useEffect, useState } from "react";
-
 const Home: NextPage = () => {
-  const adminPage = useStoreState((state) => state.adminPage);
-  const setAdminPage = useStoreActions((actions) => actions.setAdminPage);
-  const [localState, setLocalState] = useState(adminPage);
-
-  useEffect(() => {
-    setLocalState(!adminPage);
-  }, [adminPage, setAdminPage]);
-
   return (
     <div>
       <Head>
@@ -28,13 +17,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>I Lost My 💩!</h1>
-        <div>
-          <>
-            <Info />
-            <List />
-          </>
+      <main className="base">
+        <h1 className="base_title">I Lost My 💩!</h1>
+        <h2 className="base_subtitle">
+          This is the amount of times I lost it while I was looking at bad code
+        </h2>
+        <div className="base_content">
+          <Info />
+          <List />
         </div>
       </main>
       <Footer />

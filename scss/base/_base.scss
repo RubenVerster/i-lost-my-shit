@@ -23,7 +23,37 @@ a {
   text-decoration: none;
   color: #000;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
   &:hover {
     color: #fff;
+  }
+}
+
+.base {
+  width: 100%;
+  height: $page-height;
+
+  &_title {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 2.5rem;
+  }
+  &_subtitle {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  &_content {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
   }
 }
