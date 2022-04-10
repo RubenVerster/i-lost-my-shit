@@ -56,8 +56,10 @@ const Info = () => {
 
   return (
     <div className="info">
-      {loading && !fetchError ? (
+      {loading ? (
         <HashLoader size={169} color={"#FFF"} />
+      ) : fetchError ? (
+        "Error Fetching Data"
       ) : (
         <>
           {total && (

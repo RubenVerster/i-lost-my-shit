@@ -4,10 +4,13 @@ import { IEntry } from "../types";
 import { query, orderBy, limit, getDocs, collection } from "firebase/firestore";
 import db from "../firebase";
 import { useEffect, useState } from "react";
+import { ClockLoader } from "react-spinners";
 
 const List = () => {
   const instancesRef = collection(db, "instances");
   const [instances, setInstances] = useState<IEntry[]>([]);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const fetchInstances = async () => {
     let instancesCollection: IEntry[] = [];
@@ -15,14 +18,14 @@ const List = () => {
     try {
       const DB_COLLECTION = await getDocs(q);
       DB_COLLECTION.forEach((doc) => {
-        //@ts-ignore - can use advanced TS to configure this
+        //@ts-ignore - diff between IEntry and DocumentData from Firebase
         instancesCollection.push(doc.data());
       });
     } catch (error) {
       console.log(error);
+      setError(true);
     }
-
-    console.log(instancesCollection);
+    setLoading(false);
 
     setInstances(instancesCollection);
   };
@@ -36,7 +39,17 @@ const List = () => {
       return <Card {...entry} key={entry.id} />;
     });
   };
-  return <div className="list">{renderList()} </div>;
+  return (
+    <div className="list">
+      {loading ? (
+        <ClockLoader size={111} color="#fff" />
+      ) : error ? (
+        "Error Fetching Data"
+      ) : (
+        renderList()
+      )}
+    </div>
+  );
 };
 
 export default List;
