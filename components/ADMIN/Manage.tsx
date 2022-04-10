@@ -1,4 +1,4 @@
-const Manage = ({ logout }: any) => {
+const Manage = () => {
   return (
     <>
       <h1>Add an instance</h1>

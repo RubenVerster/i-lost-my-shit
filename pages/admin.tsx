@@ -41,7 +41,7 @@ const Admin = () => {
     <div className="admin">
       {!loading ? (
         auth ? (
-          <Manage logout={logout} />
+          <Manage />
         ) : (
           <Login auth={auth} setAuth={setAuth} />
         )
