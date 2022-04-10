@@ -1,4 +1,3 @@
-import data from "../mock.json";
 import Card from "./Card";
 import { IEntry } from "../types";
 import { query, orderBy, limit, getDocs, collection } from "firebase/firestore";
