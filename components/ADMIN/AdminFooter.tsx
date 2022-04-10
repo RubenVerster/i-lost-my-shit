@@ -6,13 +6,14 @@ const Footer = ({ auth, logout }: IFooter) => {
     <footer className="footer">
       <div className="footer_container">
         {auth && (
-          <button
+          <div
+            className="footer_container_logout"
             onClick={() => {
               logout();
             }}
           >
             Log Out
-          </button>
+          </div>
         )}
         <Link href="/">Home</Link>
       </div>

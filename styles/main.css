@@ -172,6 +172,23 @@ a {
     text-transform: uppercase;
     padding: 10px;
     height: 100%; }
+    .footer_container_logout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #222;
+      text-transform: uppercase;
+      padding: 0 7px;
+      height: 100%;
+      border-radius: 5px;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid #000; }
+      .footer_container_logout:hover {
+        background-color: #222;
+        color: #fff;
+        border: 1px solid #fff; }
 
 .info {
   width: 100%;
