@@ -12,22 +12,40 @@ const Add = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
+  const updateTotalInDB = async (level: Level) => {
+    switch (level) {
+      case Level.Low:
+        break;
+
+      default:
+        break;
+    }
+  };
+
+  const checkEmpty = (title: string) => {
+    let testString = title.replaceAll(" ", "");
+
+    if (testString.length === 0) {
+      return true;
+    }
+    return false;
+  };
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     setLoading(true);
     setError(false);
 
-    if (title.length < 7) {
+    if (
+      title.length < 7 ||
+      level === null ||
+      title.length > 99 ||
+      checkEmpty(title)
+    ) {
       setErrorMsg("You missing something man?");
       setError(true);
       setLoading(false);
-      return;
-    }
-    if (level === null) {
-      setLoading(false);
-      setError(true);
-      setErrorMsg("You missing something man?");
       return;
     }
 
@@ -79,6 +97,7 @@ const Add = () => {
             }`}
             onClick={() => {
               setLevel(Level.Low);
+              setError(false);
             }}
           >
             {Level.Low}
@@ -89,6 +108,7 @@ const Add = () => {
             }`}
             onClick={() => {
               setLevel(Level.Medium);
+              setError(false);
             }}
           >
             {Level.Medium}
@@ -99,6 +119,7 @@ const Add = () => {
             }`}
             onClick={() => {
               setLevel(Level.High);
+              setError(false);
             }}
           >
             {Level.High}
