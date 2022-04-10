@@ -427,8 +427,8 @@ a {
   padding: 1rem;
   width: 100%; }
   .manage_title {
-    padding-bottom: 1rem;
-    text-align: center; }
+    text-align: center;
+    font-size: 3rem; }
   .manage_content {
     display: flex;
     flex-direction: column;
