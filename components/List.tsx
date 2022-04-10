@@ -35,7 +35,6 @@ const List = () => {
   }, []);
 
   const renderList = () => {
-    console.log(`INSTANCES`, instances);
     return instances.map((entry: IEntry) => {
       return <Card {...entry} key={entry.id} />;
     });

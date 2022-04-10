@@ -87,7 +87,7 @@ const Add = () => {
       const docRef = await addDoc(collection(db, "instances"), {
         name: title,
         level: level,
-        date: new Date(),
+        date: Date(),
         id: uuidv4(),
       });
       updateTotalInDB(level);

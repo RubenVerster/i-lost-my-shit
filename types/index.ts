@@ -1,8 +1,6 @@
 export interface IEntry {
   name: string;
-  date: {
-    [key: string]: number;
-  };
+  date: string;
   level: string;
   id: number;
 }
