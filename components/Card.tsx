@@ -1,6 +1,6 @@
 import { IEntry, Level } from "../types";
 
-const Card = ({ title, date, level, id }: IEntry) => {
+const Card = ({ name, date, level }: IEntry) => {
   const determineColor = (level: string) => {
     switch (level) {
       case Level.Low:
@@ -18,8 +18,10 @@ const Card = ({ title, date, level, id }: IEntry) => {
       className="card"
       style={{ borderBottom: `3px solid ${determineColor(level)}` }}
     >
-      <p className="card_title">{title} </p>
-      <span className={`card_date ${determineColor(level)}`}>{date}</span>
+      <p className="card_title">{name} </p>
+      <span className={`card_date ${determineColor(level)}`}>
+        {date?.seconds}
+      </span>
     </div>
   );
 };

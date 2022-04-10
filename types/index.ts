@@ -1,6 +1,8 @@
 export interface IEntry {
-  title: string;
-  date: string;
+  name: string;
+  date: {
+    [key: string]: number;
+  };
   level: string;
   id: number;
 }

@@ -16,7 +16,6 @@ const Info = () => {
       const DB_TOTAL = await getDoc(docRef);
 
       if (DB_TOTAL.exists()) {
-        console.log("DB_TOTAL", DB_TOTAL.data());
         setTotal(DB_TOTAL.data().amount);
       } else {
         console.log("No such document!");
@@ -34,8 +33,6 @@ const Info = () => {
       const DB_LEVEL = await getDoc(docRef);
 
       if (DB_LEVEL.exists()) {
-        console.log("DB_LEVEL", DB_LEVEL.data());
-
         const { low, med, high } = DB_LEVEL.data();
         setStats({
           low: low,
