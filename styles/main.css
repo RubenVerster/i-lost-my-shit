@@ -181,7 +181,6 @@ a {
       margin: 0 auto;
       text-align: center;
       font-size: 9rem;
-      width: 90%;
       justify-content: flex-start; } }
   .info_total {
     font-size: 11rem;
@@ -192,8 +191,8 @@ a {
     @media (max-width: 768px) {
       .info_total {
         text-align: center;
-        font-size: 7rem;
-        width: 70%; } }
+        font-size: 4rem;
+        width: 100%; } }
   .info_stats {
     overflow: hidden;
     margin: 2rem 0;
@@ -221,7 +220,8 @@ a {
       @media (max-width: 768px) {
         .info_stats_item {
           font-size: 1.8rem;
-          margin-top: 0; }
+          margin-top: 0;
+          width: 77%; }
           .info_stats_item span {
             font-size: 1rem; }
           .info_stats_item p {
@@ -278,7 +278,7 @@ a {
     .list {
       overflow-y: scroll;
       height: 100%;
-      max-height: 30vh;
+      max-height: 42vh;
       justify-content: flex-start;
       margin-top: 1rem; } }
 
