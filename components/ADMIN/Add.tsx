@@ -30,14 +30,12 @@ const Add = () => {
 
     if (DB_LEVEL.exists()) {
       let { low, med, high } = DB_LEVEL.data();
-      console.log(low, med, high);
 
       let newTotals = {
         low: low,
         med: med,
         high: high,
       };
-      console.log(level);
       switch (level) {
         case Level.Low:
           newTotals.low = low + 1;

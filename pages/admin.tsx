@@ -37,13 +37,17 @@ const Admin = () => {
     }
   };
 
+  useEffect(() => {
+    console.log(auth);
+  }, [auth]);
+
   return (
     <div className="admin">
       {!loading ? (
         auth ? (
           <Manage />
         ) : (
-          <Login auth={auth} setAuth={setAuth} />
+          <Login setAuth={setAuth} />
         )
       ) : (
         <CircleLoader size={420} color="#D0021B" />

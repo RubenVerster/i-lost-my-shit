@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface IEntry {
   name: string;
   date: string;
@@ -14,4 +16,8 @@ export enum Level {
 export interface IFooter {
   logout: () => void;
   auth: boolean;
+}
+
+export interface ISetAuth {
+  setAuth: Dispatch<SetStateAction<boolean>>;
 }

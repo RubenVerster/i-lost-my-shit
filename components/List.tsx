@@ -13,7 +13,7 @@ const List = () => {
 
   const fetchInstances = async () => {
     let instancesCollection: IEntry[] = [];
-    const q = await query(instancesRef, limit(5), orderBy("date", "asc"));
+    const q = await query(instancesRef, limit(5), orderBy("date", "desc"));
     try {
       const DB_COLLECTION = await getDocs(q);
       DB_COLLECTION.forEach((doc) => {

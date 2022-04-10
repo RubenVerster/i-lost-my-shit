@@ -13,9 +13,6 @@ const Card = (props: IEntry) => {
         return "white";
     }
   };
-  // console.log(date.format(props.date?.seconds.toString, "MMM DD, YYYY"));
-  console.log(Date.parse(props.date));
-  console.log(Date.now());
 
   return (
     <div

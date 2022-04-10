@@ -5,15 +5,16 @@ import {
   getAuth,
 } from "firebase/auth";
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
+import { ISetAuth } from "../../types";
 
-const Login = ({ setAuth, auth }: any) => {
+const Login = ({ setAuth }: ISetAuth) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitError, setSubmitError] = useState(false);
   const [loading, setLoading] = useState(false);
   const FBAUTH = getAuth();
-  const login = async (e: any) => {
+  const login = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
@@ -70,7 +71,7 @@ const Login = ({ setAuth, auth }: any) => {
           id="exampleinput requiredPassword1"
           placeholder=""
         />
-        <button disabled={loading} type="submit" onClick={(e) => login(e)}>
+        <button disabled={loading} type="submit">
           Login
         </button>
       </form>
