@@ -31,6 +31,7 @@ const List = () => {
 
   useEffect(() => {
     fetchInstances();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const renderList = () => {
