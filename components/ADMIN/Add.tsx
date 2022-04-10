@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const Add = () => {
   const [title, setTitle] = useState("");
-  const [option, setOption] = useState<Level | null>(null);
+  const [level, setLevel] = useState<Level | null>(null);
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [loading, setLoading] = useState(false);
@@ -24,7 +24,7 @@ const Add = () => {
       setLoading(false);
       return;
     }
-    if (option === null) {
+    if (level === null) {
       setLoading(false);
       setError(true);
       setErrorMsg("You missing something man?");
@@ -34,7 +34,7 @@ const Add = () => {
     try {
       const docRef = await addDoc(collection(db, "instances"), {
         name: title,
-        option: option,
+        level: level,
         date: new Date(),
         id: uuidv4(),
       });
@@ -44,7 +44,7 @@ const Add = () => {
       return;
     }
 
-    setOption(null);
+    setLevel(null);
     setTitle("");
     setSuccess(true);
     setLoading(false);
@@ -75,30 +75,30 @@ const Add = () => {
         <div className="add_form_options">
           <div
             className={`add_form_options_option yellow ${
-              option === Level.Low && "selected"
+              level === Level.Low && "selected"
             }`}
             onClick={() => {
-              setOption(Level.Low);
+              setLevel(Level.Low);
             }}
           >
             {Level.Low}
           </div>
           <div
             className={`add_form_options_option orange ${
-              option === Level.Medium && "selected"
+              level === Level.Medium && "selected"
             }`}
             onClick={() => {
-              setOption(Level.Medium);
+              setLevel(Level.Medium);
             }}
           >
             {Level.Medium}
           </div>
           <div
             className={`add_form_options_option red ${
-              option === Level.High && "selected"
+              level === Level.High && "selected"
             }`}
             onClick={() => {
-              setOption(Level.High);
+              setLevel(Level.High);
             }}
           >
             {Level.High}
