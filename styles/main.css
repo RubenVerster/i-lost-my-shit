@@ -429,6 +429,9 @@ a {
   .manage_title {
     text-align: center;
     font-size: 3rem; }
+    @media (max-width: 1000px) {
+      .manage_title {
+        font-size: 2rem; } }
   .manage_content {
     display: flex;
     flex-direction: column;
