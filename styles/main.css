@@ -224,7 +224,11 @@ a {
       @media (max-width: 768px) {
         .info_stats_item {
           font-size: 1.8rem;
-          margin-top: 0; } }
+          margin-top: 0; }
+          .info_stats_item span {
+            font-size: 1rem; }
+          .info_stats_item p {
+            display: none; } }
       .info_stats_item p {
         margin: 0 auto;
         bottom: 0;
@@ -244,6 +248,10 @@ a {
         .info_stats_item:hover p {
           color: rgba(0, 0, 0, 0.7);
           font-size: 1rem; }
+      @media (max-width: 768px) {
+        .info_stats_item:hover {
+          margin-bottom: 0;
+          padding-bottom: 0; } }
     @media (max-width: 768px) {
       .info_stats {
         height: 50px;

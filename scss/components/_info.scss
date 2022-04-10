@@ -56,6 +56,12 @@
       @media (max-width: 768px) {
         font-size: 1.8rem;
         margin-top: 0;
+        span {
+          font-size: 1rem;
+        }
+        p {
+          display: none;
+        }
       }
 
       p {
@@ -78,6 +84,13 @@
         p {
           color: rgba($color: $black, $alpha: 0.7);
           font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        &:hover {
+          margin-bottom: 0;
+          padding-bottom: 0;
         }
       }
     }
