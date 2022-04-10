@@ -34,7 +34,7 @@ a {
     padding-top: 1rem;
     font-size: 4.2rem;
     word-spacing: 11px; }
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       .base_title {
         margin: 0 auto;
         text-align: center;
@@ -47,7 +47,7 @@ a {
     padding-top: 0.5rem;
     font-size: 1.5rem;
     word-spacing: 3px; }
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       .base_subtitle {
         margin: 0 auto;
         text-align: center;
@@ -62,7 +62,7 @@ a {
     justify-content: space-evenly;
     align-items: center;
     height: 70vh; }
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       .base_content {
         flex-direction: column;
         justify-content: start;
@@ -96,7 +96,7 @@ a {
   bottom: 42px;
   z-index: 5;
   clip-path: polygon(0% 89%, 3% 82%, 6% 78%, 7% 84%, 8% 92%, 12% 89%, 13% 86%, 16% 91%, 21% 96%, 21% 87%, 24% 91%, 29% 81%, 30% 88%, 32% 93%, 36% 93%, 38% 87%, 42% 91%, 45% 83%, 48% 79%, 52% 83%, 51% 88%, 53% 92%, 57% 93%, 58% 89%, 61% 86%, 61% 81%, 65% 85%, 65% 89%, 69% 93%, 74% 91%, 73% 87%, 78% 82%, 78% 87%, 81% 91%, 86% 92%, 88% 85%, 92% 88%, 95% 83%, 100% 88%, 100% 100%, 0% 100%); }
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .flame {
       bottom: 22px; } }
   .flame-1 {
@@ -179,7 +179,7 @@ a {
   align-items: center;
   flex-direction: column;
   justify-content: space-between; }
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .info {
       margin: 0 auto;
       text-align: center;
@@ -191,7 +191,7 @@ a {
     text-align: center;
     animation: color-change 2s linear infinite;
     text-shadow: 0 0 11px rgba(255, 255, 255, 0.5); }
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       .info_total {
         text-align: center;
         font-size: 4rem;
@@ -220,7 +220,7 @@ a {
       transition: all 0.3s ease-in-out;
       position: relative;
       text-align: center; }
-      @media (max-width: 768px) {
+      @media (max-width: 1000px) {
         .info_stats_item {
           font-size: 1.8rem;
           margin-top: 0;
@@ -248,11 +248,11 @@ a {
         .info_stats_item:hover p {
           color: rgba(0, 0, 0, 0.7);
           font-size: 1rem; }
-      @media (max-width: 768px) {
+      @media (max-width: 1000px) {
         .info_stats_item:hover {
           margin-bottom: 0;
           padding-bottom: 0; } }
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       .info_stats {
         height: 50px;
         font-size: 1rem;
@@ -277,7 +277,7 @@ a {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column; }
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .list {
       overflow-y: scroll;
       height: 100%;
@@ -311,11 +311,11 @@ a {
     color: #000;
     top: 0;
     right: 0; }
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       .card_date {
         height: 17px;
         font-size: 0.5rem; } }
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .card {
       margin-top: 0.7rem;
       font-size: 0.85rem; } }
@@ -357,7 +357,7 @@ a {
     width: 95%;
     top: 2.5%;
     left: 2.5%; }
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .login {
       width: 80%;
       height: 42vh; } }
@@ -380,7 +380,7 @@ a {
       text-align: center;
       height: 4rem;
       width: 100%; }
-      @media (max-width: 768px) {
+      @media (max-width: 1000px) {
         .login__form input {
           height: 2.5rem;
           margin: 1rem; } }
@@ -399,7 +399,7 @@ a {
       .login__form button:hover {
         transform: translateY(-4px);
         box-shadow: 0 1rem 2rem rgba(255, 0, 0, 0.4); }
-      @media (max-width: 768px) {
+      @media (max-width: 1000px) {
         .login__form button {
           height: 2.5rem;
           padding: 0rem;

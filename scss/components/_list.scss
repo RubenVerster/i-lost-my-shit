@@ -6,7 +6,7 @@
   justify-content: space-evenly;
   flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     overflow-y: scroll;
     height: 100%;
     max-height: 42vh;
