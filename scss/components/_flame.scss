@@ -52,19 +52,15 @@
 
   &-1 {
     animation: left-right 11s infinite linear;
-    animation-delay: 333ms;
-    background-color: rgba(255, 0, 0, 0.69);
     height: 400px;
   }
   &-2 {
     animation: right-left 5s infinite linear;
-    animation-delay: 420ms;
     background-color: rgba(255, 255, 0, 0.88);
     height: 333px;
   }
   &-3 {
     animation: left-right 7s infinite linear;
-    animation-delay: 690ms;
     background-color: rgba(255, 166, 0, 0.77);
   }
 }
