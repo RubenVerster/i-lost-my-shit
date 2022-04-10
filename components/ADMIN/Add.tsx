@@ -3,12 +3,24 @@ import { Level } from "../../types";
 
 const Add = () => {
   const [title, setTitle] = useState("");
-  const [option, setOption] = useState<Level>(Level.Low);
+  const [option, setOption] = useState<Level | null>(null);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    console.log(title);
-    console.log(option);
+
+    setLoading(true);
+
+    if (title.length < 7 || !option) {
+      setError(true);
+      return;
+    }
+
+    console.log(title, option);
+    setOption(null);
+    setTitle("");
+    setLoading(false);
   };
 
   return (
@@ -19,11 +31,13 @@ const Add = () => {
         }}
         className="add_form"
       >
+        {error && <p className="error">You missing something man?</p>}
+
         <input
           className="add_form_input"
-          required
           type="text"
           onChange={(e) => {
+            setError(false);
             setTitle(e.target.value);
           }}
           value={title}
@@ -61,7 +75,7 @@ const Add = () => {
             {Level.High}
           </div>
         </div>
-        <button className="add_form_button" type="submit">
+        <button disabled={loading} className="add_form_button" type="submit">
           Add
         </button>
       </form>

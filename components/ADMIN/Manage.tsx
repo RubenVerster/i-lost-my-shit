@@ -1,5 +1,4 @@
 import Add from "./Add";
-import List from "../List";
 const Manage = () => {
   return (
     <div className="manage">
