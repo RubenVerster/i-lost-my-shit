@@ -1,7 +1,8 @@
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, updateDoc } from "firebase/firestore";
 import { FormEvent, useState } from "react";
 import db from "../../firebase";
 import { Level } from "../../types";
+
 import { v4 as uuidv4 } from "uuid";
 
 const Add = () => {
@@ -13,12 +14,45 @@ const Add = () => {
   const [success, setSuccess] = useState(false);
 
   const updateTotalInDB = async (level: Level) => {
-    switch (level) {
-      case Level.Low:
-        break;
+    const totalRef = await doc(db, "statistics", "total");
+    const DB_TOTAL = await getDoc(totalRef);
 
-      default:
-        break;
+    if (DB_TOTAL.exists()) {
+      let total = DB_TOTAL.data().amount;
+      const newTotal = total + 1;
+      await updateDoc(totalRef, {
+        amount: newTotal,
+      });
+    }
+
+    const levelRef = await doc(db, "statistics", "level");
+    const DB_LEVEL = await getDoc(levelRef);
+
+    if (DB_LEVEL.exists()) {
+      let { low, med, high } = DB_LEVEL.data();
+      console.log(low, med, high);
+
+      let newTotals = {
+        low: low,
+        med: med,
+        high: high,
+      };
+      console.log(level);
+      switch (level) {
+        case Level.Low:
+          newTotals.low = low + 1;
+          break;
+        case Level.Medium:
+          newTotals.med = med + 1;
+          break;
+        case Level.High:
+          newTotals.high = high + 1;
+          break;
+
+        default:
+          break;
+      }
+      await updateDoc(levelRef, newTotals);
     }
   };
 
@@ -56,6 +90,7 @@ const Add = () => {
         date: new Date(),
         id: uuidv4(),
       });
+      updateTotalInDB(level);
     } catch (error) {
       setError(true);
       setErrorMsg("Failed saving");
