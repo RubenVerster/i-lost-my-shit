@@ -16,10 +16,18 @@ const Add = () => {
     e.preventDefault();
 
     setLoading(true);
+    setError(false);
 
-    if (title.length < 7 || !option) {
+    if (title.length < 7) {
       setErrorMsg("You missing something man?");
       setError(true);
+      setLoading(false);
+      return;
+    }
+    if (option === null) {
+      setLoading(false);
+      setError(true);
+      setErrorMsg("You missing something man?");
       return;
     }
 
