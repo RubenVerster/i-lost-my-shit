@@ -37,10 +37,6 @@ const Admin = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(auth);
-  }, [auth]);
-
   return (
     <div className="admin">
       {!loading ? (

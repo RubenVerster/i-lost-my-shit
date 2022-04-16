@@ -87,6 +87,7 @@ const Add = () => {
         level: level,
         date: Date(),
         id: uuidv4(),
+        time: Date.now(),
       });
       updateTotalInDB(level);
     } catch (error) {
